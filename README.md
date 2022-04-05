@@ -1,2 +1,2 @@
-# partialFlips
-Sorting Algorithm (partial flips)
+# Partial Flips
+Sorting Algorithm using partial flips
