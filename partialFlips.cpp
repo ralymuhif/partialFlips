@@ -55,27 +55,32 @@ vector <int> sortAlg(int *arr, int n)
  
             // Moving now the maximum element at the end of the array
             partialFlip(arr, sizeArray-1);
+
+            // Adding the first K value for the flip in a vector
+            result.push_back(maxIndex);
+
+            // Adding the 2nd K value for the flip in a vector
+            result.push_back(sizeArray-1);
             
         } 
-        // Adding the K value in a vector
-        result.push_back(maxIndex);
+        
     }
     // Returning the vector result containig the k values
     return result;
 }
 
 void printArray (int arr [], int n){
-    cout << "[ ";
-    for (int i = 0; i < n; ++i){
-        cout<< arr[i]<<", ";
+    cout << "[ " << arr[0];
+    for (int i = 1; i < n; ++i){
+        cout << ", " << arr[i];
     }
     cout << "]" <<endl;
 }
 
 void printVector (vector<int> vec) {
-    cout << "[ ";
-    for (int value : vec) {
-        cout <<value <<", ";
+    cout << "[ " << vec[0];
+    for (int i = 1; i < vec.size(); i++) {
+        cout <<", " << vec[i] ;
     }
     cout << "]" <<endl;    
 }
